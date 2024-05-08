@@ -26,7 +26,6 @@ header{
 }
 
 .eslogan{
-    position: absolute;
     color: white;
     font-size: 50px;
     text-align: center;
@@ -35,6 +34,7 @@ header{
    flex-direction: column;
    gap: 2rem;
    align-items: center;
+   position: relative;
 }
 
 .awards{
@@ -91,7 +91,6 @@ header{
     padding: 0.5rem;
     gap: 1rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    position: absolute;
     background-color: white;
     
 }
@@ -142,8 +141,6 @@ header{
     flex-direction: column;
     width: 100%;
     align-items: center;
-    margin-top: 5rem;
-
 }
 
 .cards-container{
@@ -294,6 +291,10 @@ header{
 /* Para Tablet */
 @media(max-width:768px) {
 
+   .ganador{
+    margin-top: 100px;
+   }
+
     .mostrar-menu,
     .esconder-menu {
         display: block;
@@ -327,6 +328,8 @@ header{
     #check:checked~.menu {
         right: 0;
     }
+
+   
 }
 
 .button {
@@ -499,16 +502,27 @@ header{
 
 /*------------- LANDING ESTATICO-----------------*/
 
+#landingTours{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+
 .mixedTours{
     display: flex;
     gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
 }
 
 .mixCultura{
     
     display: grid;
     justify-content: center;
-    width: 448px;
+    width: 100%;
     
 }
 
@@ -524,6 +538,7 @@ header{
     display: grid;
     grid-template-rows: 15rem 17rem; 
     grid-template-columns: 11rem 10rem 17rem 17rem 11rem 10rem; /* Seis columnas de ancho igual */
+    width: 90%;
     
 }
 
