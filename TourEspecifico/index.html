@@ -103,9 +103,51 @@
             <div class="precio">
             </div>
             <div class="reservar">
-                <button data-bs-toggle="modal" data-bs-target="#modalLogIn" class="inscribete boton">Reservar</button>
+                <button data-bs-toggle="modal" data-bs-target="#reservaModal" class="inscribete boton">Reservar</button>
             </div>
         </div>
+
+        <!-- INICIO MODAL DE RESERVA-->
+        
+        <!-- modal -->
+        <div class="modal fade" id="reservaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel" style="color: black;">Log in</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="login" style="color: black;" >
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Fecha</label>
+                                <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                                <div id="emailHelp" class="form-text">DD-MM-AAAA</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Hora</label>
+                                <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                                <div id="emailHelp" class="form-text">-HH:MM:SS</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Metodo de pago</label>
+                                <select name="" id="role">
+                                    <option value="Traveler"></option>
+                                    <option value="Traveler">PSE</option>
+                                    <option value="Guide">Efecty</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Reservar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--FINAL MODAL DE RESERVA-->
+
+
+
         <div class="right">
             <div class="descripcion">
             </div>
@@ -171,44 +213,6 @@
     <div class="info-guia" >
         
 
-    </div>
-    
-
-    <!--<Inicio modal Reseñas>-->
-    <!--<modal>-->
-    <!-- Modal -->
-    <div class="modal fade" id="modalReview" tabindex="-1" aria-labelledby="modalReviewLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable card mb-3" style="max-width: 30%">
-            <div class="modal-content" style="width: 100%;">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="modalReviewLabel">Reseñas</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body" id="modalBodyRev">
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-
-    <!--<Fin modal Reseñas>-->
-
-    <div id="reseñas">
-        <h2><b>Reseñas</b></h2>
-        <div id="contenedorRev">
-            <div id="review">
-
-            </div>
-            <div class="showmore">
-                <button class="boton btnMore" id="btnMoreReview" data-bs-toggle="modal"
-                    data-bs-target="#modalReview">Ver
-                    mas</button>
-            </div>
-        </div>
     </div>
 
     <div class="cards">

@@ -140,7 +140,7 @@ function showTours(tours) {
 
     const contenedorCards = document.querySelector('#cards-container');
     clean();
-    
+    console.log(tours);
     tours.forEach((tour) => {
 
         const {imagen,nombre,descripcion, tourId, idGuia} = tour;
@@ -273,7 +273,7 @@ function clean() {
 }
 
 
-const modalBody = document.querySelector('.modal-content'); 
+const modalBody = document.querySelector('.modal-content-tour'); 
 const infoModal = document.createElement('div')
 
 
@@ -296,8 +296,7 @@ function showDetail(e) {
                             
         </div>
         <div class="modal-body-right degraded-modal ">
-            
-
+        
             <div >
                 <h1>${nombre}</h1>
             </div>
