@@ -28,7 +28,6 @@ function getDataCategories() {
         return respuesta.json();
     })
     .then((dataCategories) =>{
-        console.log(dataCategories);
         showCategories(dataCategories.Categories)
 
     })
@@ -122,7 +121,6 @@ function showDuration(durationData) {
     durationData.sort((a, b) => parseFloat(a.duracion) - parseFloat(b.duracion));
 
     const durationOnce = [...new Set(durationData.map(tour=> tour.duracion))];
-    console.log(durationOnce);
 
     durationOnce.forEach(duration => {
         const option = document.createElement('option');
@@ -163,7 +161,6 @@ function showTours(tours) {
         `;
 
         contenedorCards.appendChild(tourHtml);
-        console.log(contenedorCards);
 
 
         
@@ -189,7 +186,6 @@ const estado = document.querySelector('#availability');
 categoria.addEventListener('click',(e)=>{
     
     criteriosSeleccionados.categoria = e.target.value;
-    console.log(criteriosSeleccionados.categoria);
     filtrarTour();  
 });
 
@@ -292,7 +288,6 @@ function showDetail(e) {
     const tourId = e.target.getAttribute('tourId')
     const idGuia = e.target.getAttribute('idGuia')
 
-    console.log(tourId);
     infoModal.innerHTML = `
 
     <div class="modal-bbody" style="background-image: url(/IMAGENES/TOURS/${imagen});" >
@@ -330,7 +325,6 @@ modalContent.addEventListener('click', getDataModal);
 function getDataModal(e) {
     const tourId = e.target.getAttribute('tourId')
     const idGuia = e.target.getAttribute('idGuia')
-    console.log(tourId);
     localStorage.setItem('tourId',JSON.stringify(tourId));
     localStorage.setItem('idGuia',JSON.stringify(idGuia))
     
@@ -366,10 +360,7 @@ function mostrarFiltrado(e) {
 /*---------------Mix Categorías------------- */
 
 function mixRandom(tours) {
-    console.log(tours);
-
     let mix = tours.sort(() => Math.random() - 0.5).slice(0,4)
-    console.log(mix);
 
     const mixedTours = document.querySelector('#mixedTours');
 
@@ -400,8 +391,6 @@ function culturaRandom(tours) {
 
     const toursFiltrados = tours.filter(tour => tour.categorias.some(categoria => categoriasMix.includes(categoria)));
     const toursAleatorios = toursFiltrados.sort(() => Math.random() - 0.5).slice(0, 5);
-
-    console.log(toursAleatorios);
 
     let t1 = toursAleatorios[0]
     let t2 = toursAleatorios[1]
@@ -488,7 +477,6 @@ function innovadoresRandom(tours) {
     const toursFiltrados = tours.filter(tour => tour.categorias.some(categoria => categoriasMix.includes(categoria)));
     const toursAleatorios = toursFiltrados.sort(() => Math.random() - 0.5).slice(0, 4);
 
-    console.log(toursAleatorios);
 
     let t1 = toursAleatorios[0];
     let t2 = toursAleatorios[1];
@@ -556,7 +544,6 @@ function gastronomicosRandom(tours) {
     const toursFiltrados = tours.filter(tour => tour.categorias.some(categoria => categoriasMix.includes(categoria)));
     const toursAleatorios = toursFiltrados.sort(() => Math.random() - 0.5).slice(0, 5);
 
-    console.log(toursAleatorios);
 
     let t1 = toursAleatorios[0]
     let t2 = toursAleatorios[1]
